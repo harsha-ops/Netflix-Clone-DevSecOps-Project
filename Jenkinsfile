@@ -18,7 +18,7 @@ pipeline {
 
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/N4si/DevSecOps-Project.git'
+                git branch: 'master', url: 'https://github.com/harsha-ops/Netflix-Clone-DevSecOps-Project.git'
             }
         }
 
