@@ -62,7 +62,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build --build-arg TMDB_V3_API_KEY=5f2f4c170b0b3abeea46efedc27d608e -t "${DOCKER_IMAGE}" .'
+                sh "docker build --build-arg TMDB_V3_API_KEY=5f2f4c170b0b3abeea46efedc27d608e -t ${DOCKER_IMAGE} ."
             }
         }
 
