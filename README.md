@@ -75,12 +75,12 @@ Prometheus collects application and cluster metrics, while Grafana visualizes pe
 **Step 1: Launch VirtualMachine (Ubuntu 22.04):**
 
 - Create a VirtualMachine with Ubuntu 22.04.
-- Connect to the instance using SSH.
+- Connect to the VM using SSH.
 
 **Step 2: Clone the Code:**
 
 - Update all the packages and then clone the code.
-- Clone your application's code repository onto the EC2 instance:
+- Clone your application's code repository onto the VM:
     
     ```bash
     git clone https://github.com/harsha-ops/Netflix-Clone-DevSecOps-Project.git
