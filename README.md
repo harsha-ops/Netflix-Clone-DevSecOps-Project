@@ -5,18 +5,18 @@
 <br />
 
 <div align="center">
-  <img src="./public/assets/mini-portal.png" alt="Logo" width="100%" height="100%">
+  <img src="./public/assets/home-page.png" alt="Logo" width="100%" height="100%">
   <p align="center">Home Page</p>
 </div>
 
-# Netflix Clone Deployment on Kind Kubernetes Cluster (DevSecOps Project)
+# Netflix Clone Application Deployment on Kubernetes Cluster (DevSecOps Project)
 
 ## Overview
-This project demonstrates the deployment of a Netflix clone application on a **Kind Kubernetes (K8s) cluster** using **Jenkins** for CI/CD automation and **ArgoCD** for GitOps-based deployment. It incorporates DevSecOps practices to ensure security and monitoring at every stage of the deployment pipeline.
+This project demonstrates the deployment of a Netflix clone application on a **Kubernetes (K8s) cluster** using **Jenkins** for CI/CD automation and **ArgoCD** for GitOps-based deployment. It incorporates DevSecOps practices to ensure security and monitoring at every stage of the deployment pipeline.
 
 ## Goals
 The primary goal of this project is to:
-- Deploy a Netflix clone application on a **Kind Kubernetes cluster**.
+- Deploy a Netflix clone application on a **Kubernetes cluster**.
 - Implement **DevSecOps** practices using industry-standard tools.
 - Automate the CI/CD pipeline using **Jenkins** and **ArgoCD**.
 - Ensure robust application security and performance monitoring.
@@ -38,7 +38,7 @@ The primary goal of this project is to:
 - **ArgoCD**: For GitOps-based deployment to the Kubernetes cluster.
 
 ### **Kubernetes**
-- **Kind**: Kubernetes in Docker is used as a lightweight Kubernetes cluster for local development and testing.
+- **Kind**: Kubernetes in Docker is a lightweight Kubernetes cluster for local development and testing.
 
 ---
 
@@ -48,7 +48,7 @@ The primary goal of this project is to:
 
 **Step 1: Launch VirtualMachine (Ubuntu 22.04):**
 
-- Provision an VirtualMachine on Oracle Virtualbox with Ubuntu 22.04.
+- Provision a VirtualMachine on Oracle Virtualbox with Ubuntu 22.04.
 - Connect to the instance using SSH.
 
 **Step 2: Clone the Code:**
@@ -162,7 +162,7 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
     sudo systemctl enable jenkins
     ```
     
-    - Access Jenkins in a web browser using the IP of your VM.
+    - Access Jenkins in a web browser using your VM's IP.
         
         publicIp:8080
         
@@ -568,9 +568,9 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
 
 # Phase 6: Kubernetes
 
-## Create Kubernetes Cluster with Nodegroups
+## Create Kubernetes Cluster with KinD
 
-In this phase, you'll set up a Kubernetes cluster with node groups. This will provide a scalable environment to deploy and manage your applications.
+In this phase, you'll set up a Kubernetes cluster with KinD. This will provide a lightweight Kubernetes cluster for local development and testing of applications.
 
 ## Monitor Kubernetes with Prometheus
 
@@ -620,7 +620,7 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 
 1. **Install ArgoCD:**
 
-   You can install ArgoCD on your Kubernetes cluster by following the instructions provided in the [EKS Workshop](https://archive.eksworkshop.com/intermediate/290_argocd/install/) documentation.
+   You can install ArgoCD on your Kubernetes cluster by following the instructions provided in the [EKS Workshop](https://argo-cd.readthedocs.io/en/stable/getting_started/) documentation.
 
 2. **Set Your GitHub Repository as a Source:**
 
@@ -634,5 +634,4 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
    - `syncPolicy`: Configure the sync policy, including automatic syncing, pruning, and self-healing.
 
 4. **Access your Application**
-   - To Access the app make sure port 30007 is open in your security group and then open a new tab paste your NodeIP:30007, your app should be running.
 
