@@ -678,6 +678,4 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
       Open a browser and access the application using the following URL: http://<your-cluster-IP>:<NodePort>
 
 
-<div align="center">
-  <img src="./public/assets/FinalApp.png" alt="Logo" width="100%" height="100%">
-</div>
+
