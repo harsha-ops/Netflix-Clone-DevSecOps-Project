@@ -74,7 +74,7 @@ Prometheus collects application and cluster metrics, while Grafana visualizes pe
 
 **Step 1: Launch VirtualMachine (Ubuntu 22.04):**
 
-- Provision a VirtualMachine on Oracle Virtualbox with Ubuntu 22.04.
+- Create a VirtualMachine with Ubuntu 22.04.
 - Connect to the instance using SSH.
 
 **Step 2: Clone the Code:**
