@@ -53,15 +53,20 @@ The Netflix clone application source code and the Jenkinsfile are stored in a Gi
 
 **CI/CD Pipeline (Jenkins):**
 Jenkins automates the following stages:
+
 **Code Quality Analysis:** Runs SonarQube scans on the Node.js codebase.
+
 **Containerization:** Builds Docker images for the application using a Dockerfile and pushes the Docker Image to the Docker registry.
+
 **Security Scans:** Trivy scans Docker images for vulnerabilities, and OWASP Dependency-Check analyzes dependencies.
+
 **K8s Manifest Update:** Updates Kubernetes manifests with the latest Docker image tags via a shell script.
 
 **Deployment (ArgoCD):**
 ArgoCD detects changes in the GitHub repository and deploys the application to the Kubernetes cluster.
 
 **Monitoring (Prometheus & Grafana):**
+
 Prometheus collects application and cluster metrics, while Grafana visualizes performance and health.
 ---
 
@@ -191,17 +196,17 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
         
 2. **Install Necessary Plugins in Jenkins:**
 
-Goto Manage Jenkins →Plugins → Available Plugins →
+    - Goto Manage Jenkins →Plugins → Available Plugins →
 
-Install below plugins
+    - Install below plugins
 
-1 Eclipse Temurin Installer (Install without restart)
+    1 Eclipse Temurin Installer (Install without restart)
 
-2 SonarQube Scanner (Install without restart)
+    2 SonarQube Scanner (Install without restart)
 
-3 NodeJs Plugin (Install Without restart)
+    3 NodeJs Plugin (Install Without restart)
 
-4 Email Extension Plugin
+    4 Email Extension Plugin
 
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
@@ -468,7 +473,7 @@ Now, you have installed the Dependency-Check plugin, configured the tool, and ad
    `http://<your-prometheus-ip>:9090/targets`
 
 
-####Grafana
+#### Grafana
 
 **Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus**
 
@@ -658,18 +663,18 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 
 # Phase 7: Trigger the Pipeline
 
-1. **Trigger the Jenkins Pipeline:**
-    Start the Jenkins pipeline and monitor its progress to ensure all stages are executed successfully. This includes:
+  1. **Trigger the Jenkins Pipeline:**
+      Start the Jenkins pipeline and monitor its progress to ensure all stages are executed successfully. This includes:
 
-  -  Building the Node.js application.
-  -  Performing security and quality scans.
-  -  Building and pushing the Docker image.
-  -  Updating Kubernetes manifests.
-  -  Deploying the application using ArgoCD.
+        -  Building the Node.js application.
+        -  Performing security and quality scans.
+        -  Building and pushing the Docker image.
+        -  Updating Kubernetes manifests.
+        -  Deploying the application using ArgoCD.
 
-2. **Verify Deployment:**
-    Once the pipeline completes, confirm that the application has been successfully deployed to the Kubernetes cluster.
+  2. **Verify Deployment:**
+      Once the pipeline completes, confirm that the application has been successfully deployed to the Kubernetes cluster.
 
-3. **Access the Application:**
-    Open a browser and access the application using the following URL: http://<your-cluster-IP>:<NodePort>
+  3. **Access the Application:**
+      Open a browser and access the application using the following URL: http://<your-cluster-IP>:<NodePort>
 
