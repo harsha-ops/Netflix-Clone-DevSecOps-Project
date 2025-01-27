@@ -66,9 +66,7 @@ Jenkins automates the following stages:
 ArgoCD detects changes in the GitHub repository and deploys the application to the Kubernetes cluster.
 
 **Monitoring (Prometheus & Grafana):**
-
 Prometheus collects application and cluster metrics, while Grafana visualizes performance and health.
----
 
 # **How to Run the Project**
 
