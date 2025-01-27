@@ -18,11 +18,11 @@ pipeline {
             }
         }
 
-        stage('Checkout from Git') {
-            steps {
-                git branch: 'master', url: 'https://github.com/harsha-ops/Netflix-Clone-DevSecOps-Project.git'
-            }
-        }
+        //stage('Checkout from Git') {
+        //    steps {
+         //       git branch: 'master', url: 'https://github.com/harsha-ops/Netflix-Clone-DevSecOps-Project.git'
+         //   }
+        //}
 
         stage('Sonarqube Analysis') {
             steps{
