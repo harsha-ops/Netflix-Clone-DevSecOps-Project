@@ -13,8 +13,10 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
+    "@mui/base": "^5.0.0", // Added dependency
     "@reduxjs/toolkit": "^1.8.3",
     "framer-motion": "^7.1.0",
+    "jquery": "^3.6.0", // Added dependency
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -30,7 +32,7 @@
     "@types/react-dom": "^18.0.8",
     "@types/react-slick": "^0.23.10",
     "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^4.6.4",
+    "typescript": "^5.0.0", // Updated TypeScript version
     "vite": "^3.2.1"
   }
 }
