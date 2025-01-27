@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Netflix-Deployment
+  name: netflix-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Netflix-app
+      app: netflix-app
   template:
     metadata:
       labels:
