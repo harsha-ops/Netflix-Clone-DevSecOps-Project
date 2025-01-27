@@ -12,11 +12,11 @@ pipeline {
 
     stages {
 
-        stage('Clean Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
+        //stage('Clean Workspace') {
+        //   steps {
+             //   cleanWs()
+        //   }
+        //}
 
         stage('Checkout from Git') {
             steps {
@@ -73,7 +73,7 @@ pipeline {
                     usernameVariable: 'DOCKER_USERNAME', 
                     passwordVariable: 'DOCKER_PASSWORD'
             )]) {
-                sh 'docker login -u $DOCKER_USERNAME -p $DOCKERPASSWORD'
+                sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
             }
 
             }
