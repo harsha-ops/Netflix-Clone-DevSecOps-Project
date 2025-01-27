@@ -3,6 +3,7 @@ WORKDIR /app
 COPY ./package.json .
 RUN yarn cache clean
 RUN yarn install
+COPY ./yarn.lock .
 COPY . .
 ARG TMDB_V3_API_KEY
 ENV VITE_APP_TMDB_V3_API_KEY=${TMDB_V3_API_KEY}
