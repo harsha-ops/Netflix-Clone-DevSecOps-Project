@@ -9,21 +9,25 @@
   <p align="center">Home Page</p>
 </div>
 
-# Netflix Clone Application Deployment on Kubernetes Cluster (DevSecOps Project)
+# Netflix Clone Application Deployment on Kubernetes (DevSecOps Project)
 
 ## Overview
 This project demonstrates the deployment of a Netflix clone application on a **Kubernetes (K8s) cluster** using **Jenkins** for CI/CD automation and **ArgoCD** for GitOps-based deployment. It incorporates DevSecOps practices to ensure security and monitoring at every stage of the deployment pipeline.
 
 ## Goals
-The primary goal of this project is to:
+The primary goals of this project are to:
 - Deploy a Netflix clone application on a **Kubernetes cluster**.
-- Implement **DevSecOps** practices using industry-standard tools.
-- Automate the CI/CD pipeline using **Jenkins** and **ArgoCD**.
-- Ensure robust application security and performance monitoring.
+- Automate the CI/CD pipeline using Jenkins, Docker, and ArgoCD.
+- Integrate DevSecOps tools like SonarQube, Trivy, and OWASP Dependency-Check for enhanced security.
+- Ensure continuous monitoring using Prometheus and Grafana.
 
 ---
 
 ## Tools & Technologies Used
+### **Development Tools**
+- **Node.js**: Backend framework for the Netflix clone application.
+- **Docker**: Containerization platform to package the application and its dependencies into lightweight containers.
+
 ### **DevSecOps Tools**
 - **SonarQube**: For static code analysis to maintain code quality and detect vulnerabilities.
 - **Trivy**: For scanning Docker images for vulnerabilities.
@@ -40,9 +44,28 @@ The primary goal of this project is to:
 ### **Kubernetes**
 - **Kind**: Kubernetes in Docker is a lightweight Kubernetes cluster for local development and testing.
 
+
+# **Architecture**
+The architecture for the deployment pipeline is as follows:
+
+**Source Code Management (GitHub):**
+The Netflix clone application source code and the Jenkinsfile are stored in a GitHub repository.
+
+**CI/CD Pipeline (Jenkins):**
+Jenkins automates the following stages:
+**Code Quality Analysis:** Runs SonarQube scans on the Node.js codebase.
+**Containerization:** Builds Docker images for the application using a Dockerfile and pushes the Docker Image to the Docker registry.
+**Security Scans:** Trivy scans Docker images for vulnerabilities, and OWASP Dependency-Check analyzes dependencies.
+**K8s Manifest Update:** Updates Kubernetes manifests with the latest Docker image tags via a shell script.
+
+**Deployment (ArgoCD):**
+ArgoCD detects changes in the GitHub repository and deploys the application to the Kubernetes cluster.
+
+**Monitoring (Prometheus & Grafana):**
+Prometheus collects application and cluster metrics, while Grafana visualizes performance and health.
 ---
 
-# **Step by Step Documentation!**
+# **How to Run the Project**
 
 ### **Phase 1: Initial Setup and Deployment**
 
@@ -633,5 +656,20 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
    - `source`: Set the source of your application, including the GitHub repository URL, revision, and the path to the application within the repository.
    - `syncPolicy`: Configure the sync policy, including automatic syncing, pruning, and self-healing.
 
-4. **Access your Application**
+# Phase 7: Trigger the Pipeline
+
+1. **Trigger the Jenkins Pipeline:**
+    Start the Jenkins pipeline and monitor its progress to ensure all stages are executed successfully. This includes:
+
+  -  Building the Node.js application.
+  -  Performing security and quality scans.
+  -  Building and pushing the Docker image.
+  -  Updating Kubernetes manifests.
+  -  Deploying the application using ArgoCD.
+
+2. **Verify Deployment:**
+    Once the pipeline completes, confirm that the application has been successfully deployed to the Kubernetes cluster.
+
+3. **Access the Application:**
+    Open a browser and access the application using the following URL: http://<your-cluster-IP>:<NodePort>
 
