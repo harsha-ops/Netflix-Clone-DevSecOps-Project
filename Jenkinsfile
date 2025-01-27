@@ -33,14 +33,6 @@ pipeline {
             }
         }
 
-        //stage('quality gate') {
-         //   steps {
-         //       script {
-         //           waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
-         //       }
-         //   }
-        //}
-
         stage('Install Dependencies') {
             steps {
                 sh "npm install"
@@ -62,7 +54,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build --build-arg TMDB_V3_API_KEY=5f2f4c170b0b3abeea46efedc27d608e -t ${DOCKER_IMAGE} ."
+                sh "docker build --build-arg TMDB_V3_API_KEY=<Movie_API_Key> -t ${DOCKER_IMAGE} ."
             }
         }
 
@@ -121,7 +113,7 @@ pipeline {
             body: "Project: ${env.JOB_NAME}<br/>" +
                 "Build Number: ${env.BUILD_NUMBER}<br/>" +
                 "URL: ${env.BUILD_URL}<br/>",
-            to: 'nharsha022@gmail.com',
+            to: '<youremail@gmail.com>',
             attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
     }
