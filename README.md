@@ -25,7 +25,6 @@ The primary goals of this project are to:
 
 ## Tools & Technologies Used
 ### **Development Tools**
-- **Node.js**: Backend framework for the Netflix clone application.
 - **Docker**: Containerization platform to package the application and its dependencies into lightweight containers.
 
 ### **DevSecOps Tools**
@@ -54,7 +53,7 @@ The Netflix clone application source code and the Jenkinsfile are stored in a Gi
 **CI/CD Pipeline (Jenkins):**
 Jenkins automates the following stages:
 
-**Code Quality Analysis:** Runs SonarQube scans on the Node.js codebase.
+**Code Quality Analysis:** Runs SonarQube scans on the codebase.
 
 **Containerization:** Builds Docker images for the application using a Dockerfile and pushes the Docker Image to the Docker registry.
 
