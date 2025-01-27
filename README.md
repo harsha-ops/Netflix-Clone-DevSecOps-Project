@@ -1,15 +1,17 @@
-<div align="center">
-  <img src="./public/assets/Architecture_Diagram.jpg" alt="Logo" width="100%" height="50%">
-</div>
-
-<br />
+# Netflix Clone Application Deployment on Kubernetes (DevSecOps Project)
 
 <div align="center">
   <img src="./public/assets/mini-portal.png" alt="Logo" width="100%" height="100%">
   <p align="center">Home Page</p>
 </div>
 
-# Netflix Clone Application Deployment on Kubernetes (DevSecOps Project)
+# Architecture Diagram
+
+<div align="center">
+  <img src="./public/assets/Architecture_Diagram.jpg" alt="Logo" width="100%" height="50%">
+</div>
+
+
 
 ## Overview
 This project demonstrates the deployment of a Netflix clone application on a **Kubernetes (K8s) cluster** using **Jenkins** for CI/CD automation and **ArgoCD** for GitOps-based deployment. It incorporates DevSecOps practices to ensure security and monitoring at every stage of the deployment pipeline.
