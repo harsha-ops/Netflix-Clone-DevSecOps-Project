@@ -106,7 +106,7 @@ pipeline {
                 sh '''
                 git config --global user.email = "harsha.xyz@gmail.com"
                 git config --global user.name "Harsha"
-                sed -i "s|image: .*|image: ${DOCKER_IMAGE}|g" k8smanifest/deployment.yml
+                sed -i "s|image: .*|image: ${DOCKER_IMAGE}|g" K8smanifest/deployment.yml
                 git add .
                 git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                 git push ${REPO_URL}
