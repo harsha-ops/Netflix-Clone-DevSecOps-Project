@@ -1,10 +1,5 @@
 <div align="center">
-  <img src="./public/assets/DevSecOps.png" alt="Logo" width="100%" height="100%">
-
-  <br>
-  <a href="http://netflix-clone-with-tmdb-using-react-mui.vercel.app/">
-    <img src="./public/assets/netflix-logo.png" alt="Logo" width="100" height="32">
-  </a>
+  <img src="" alt="Logo" width="100%" height="100%">
 </div>
 
 <br />
@@ -14,15 +9,46 @@
   <p align="center">Home Page</p>
 </div>
 
-# **step by step Documentation!**
+# Netflix Clone Deployment on Kind Kubernetes Cluster (DevSecOps Project)
 
-# Deploy Netflix Clone on Kind K8s Cluster using Jenkins and ArgoCD- DevSecOps Project!
+## Overview
+This project demonstrates the deployment of a Netflix clone application on a **Kind Kubernetes (K8s) cluster** using **Jenkins** for CI/CD automation and **ArgoCD** for GitOps-based deployment. It incorporates DevSecOps practices to ensure security and monitoring at every stage of the deployment pipeline.
+
+## Goals
+The primary goal of this project is to:
+- Deploy a Netflix clone application on a **Kind Kubernetes cluster**.
+- Implement **DevSecOps** practices using industry-standard tools.
+- Automate the CI/CD pipeline using **Jenkins** and **ArgoCD**.
+- Ensure robust application security and performance monitoring.
+
+---
+
+## Tools & Technologies Used
+### **DevSecOps Tools**
+- **SonarQube**: For static code analysis to maintain code quality and detect vulnerabilities.
+- **Trivy**: For scanning Docker images for vulnerabilities.
+- **OWASP Dependency-Check**: To identify vulnerabilities in dependencies.
+
+### **Monitoring Tools**
+- **Prometheus**: For real-time application monitoring and metric collection.
+- **Grafana**: For creating insightful dashboards based on Prometheus metrics.
+
+### **CI/CD Tools**
+- **Jenkins**: To automate the build, test, and deployment stages.
+- **ArgoCD**: For GitOps-based deployment to the Kubernetes cluster.
+
+### **Kubernetes**
+- **Kind**: Kubernetes in Docker is used as a lightweight Kubernetes cluster for local development and testing.
+
+---
+
+# **Step by Step Documentation!**
 
 ### **Phase 1: Initial Setup and Deployment**
 
 **Step 1: Launch VirtualMachine (Ubuntu 22.04):**
 
-- Provision an VirtualMachine on Orcal Virtualbox with Ubuntu 22.04.
+- Provision an VirtualMachine on Oracle Virtualbox with Ubuntu 22.04.
 - Connect to the instance using SSH.
 
 **Step 2: Clone the Code:**
