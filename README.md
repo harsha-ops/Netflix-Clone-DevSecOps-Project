@@ -25,7 +25,6 @@ The primary goals of this project are to:
 
 ## Tools & Technologies Used
 ### **Development Tools**
-- **Node.js**: Backend framework for the Netflix clone application.
 - **Docker**: Containerization platform to package the application and its dependencies into lightweight containers.
 
 ### **DevSecOps Tools**
@@ -54,7 +53,7 @@ The Netflix clone application source code and the Jenkinsfile are stored in a Gi
 **CI/CD Pipeline (Jenkins):**
 Jenkins automates the following stages:
 
-**Code Quality Analysis:** Runs SonarQube scans on the Node.js codebase.
+**Code Quality Analysis:** Runs SonarQube scans on the codebase.
 
 **Containerization:** Builds Docker images for the application using a Dockerfile and pushes the Docker Image to the Docker registry.
 
@@ -74,13 +73,13 @@ Prometheus collects application and cluster metrics, while Grafana visualizes pe
 
 **Step 1: Launch VirtualMachine (Ubuntu 22.04):**
 
-- Provision a VirtualMachine on Oracle Virtualbox with Ubuntu 22.04.
-- Connect to the instance using SSH.
+- Create a VirtualMachine with Ubuntu 22.04.
+- Connect to the VM using SSH.
 
 **Step 2: Clone the Code:**
 
 - Update all the packages and then clone the code.
-- Clone your application's code repository onto the EC2 instance:
+- Clone your application's code repository onto the VM:
     
     ```bash
     git clone https://github.com/harsha-ops/Netflix-Clone-DevSecOps-Project.git
